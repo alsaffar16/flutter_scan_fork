@@ -5,7 +5,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:scan/scan.dart';
-import 'package:images_picker/images_picker.dart';
+// import 'package:images_picker/images_picker.dart';
 import 'package:scan_example/scan.dart';
 
 void main() {
@@ -58,17 +58,18 @@ class _MyAppState extends State<MyApp> {
                     children: [
                       ElevatedButton(
                         child: Text("parse from image"),
-                        onPressed: () async {
-                          List<Media>? res = await ImagesPicker.pick();
-                          if (res != null) {
-                            String? str = await Scan.parse(res[0].path);
-                            if (str != null) {
-                              setState(() {
-                                qrcode = str;
-                              });
-                            }
-                          }
-                        },
+                        onPressed: () => {},
+                        // onPressed: () async {
+                        //   List<Media>? res = await ImagesPicker.pick();
+                        //   if (res != null) {
+                        //     String? str = await Scan.parse(res[0].path);
+                        //     if (str != null) {
+                        //       setState(() {
+                        //         qrcode = str;
+                        //       });
+                        //     }
+                        //   }
+                        // },
                       ),
                       ElevatedButton(
                         child: Text('go scan page'),
